@@ -1,8 +1,15 @@
 # 🎯 Logistic Regression Playground
 
+demo : 
+
+
+hosted link  :  https://ml-vizualizer.streamlit.app/
+
+
 An interactive educational web application for learning logistic regression concepts through hands-on visualization and AI-powered explanations.
 
 ## ✨ Features
+
 
 ### 🧠 Core Concepts
 - **Interactive Sigmoid Function**: Adjust parameters and see real-time changes
