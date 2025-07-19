@@ -1,6 +1,6 @@
 # 🎯 Logistic Regression Playground
 
-demo : 
+demo :  https://www.youtube.com/watch?v=VPwZy2vOZq4
 
 
 hosted link  :  https://ml-vizualizer.streamlit.app/
