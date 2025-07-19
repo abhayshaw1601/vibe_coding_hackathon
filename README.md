@@ -6,6 +6,10 @@ demo :  https://www.youtube.com/watch?v=VPwZy2vOZq4
 hosted link  :  https://ml-vizualizer.streamlit.app/
 
 
+
+for testing   use this        AIzaSyDRDY_xkrfrVuNGAD-zUVSqN0d_7VhZxUU        api key in the input box 
+
+
 An interactive educational web application for learning logistic regression concepts through hands-on visualization and AI-powered explanations.
 
 ## ✨ Features
