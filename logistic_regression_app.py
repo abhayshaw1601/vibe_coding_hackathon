@@ -35,18 +35,45 @@ st.set_page_config(
 )
 
 # --- Custom CSS for enhanced styling ---
+# --- Custom CSS for enhanced styling ---
+# --- Custom CSS for enhanced styling ---
+# --- Custom CSS for enhanced styling ---
+# --- Custom CSS for enhanced styling ---
+# --- Custom CSS for enhanced styling ---
 st.markdown("""
 <style>
-    .reportview-container {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Set the background for the main app and the sidebar */
+    .stApp {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     }
-    .sidebar .sidebar-content {
-        background: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    [data-testid="stSidebar"] {
+        background-color: #f8f9fa;
+        border-right: 1px solid #e6e6e6;
     }
+
+    /* --- THE DEFINITIVE FIX --- */
+    /* 1. Force ALL text on the page to be dark by default */
+    * {
+        color: #2c3e50 !important;
+    }
+
+    /* 2. Create exceptions ONLY for elements that need white text */
+    .stButton>button *, .ai-response * {
+        color: white !important;
+    }
+    /* -------------------------- */
+
+    /* Font sizes */
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+    p, div, li, label {
+       font-size: 1.1rem;
+    }
+
+    /* Custom button styling */
     .stButton>button {
-        color: #ffffff;
+        font-size: 1rem;
         background: linear-gradient(45deg, #667eea, #764ba2);
         border-radius: 25px;
         border: none;
@@ -58,10 +85,8 @@ st.markdown("""
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
     }
-    h1, h2, h3 {
-        color: #2c3e50;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+
+    /* Metric card styling */
     .metric-card {
         background: white;
         padding: 1rem;
@@ -69,13 +94,19 @@ st.markdown("""
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         margin: 0.5rem 0;
     }
+    .metric-card h2[style] {
+        color: #667eea !important; /* Keep the special color for the probability value */
+    }
+
+    /* AI Response styling */
     .ai-response {
         background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        color: white;
         padding: 1rem;
         border-radius: 10px;
         margin: 1rem 0;
     }
+
+    /* Concept box styling */
     .concept-box {
         background: #f8f9fa;
         border-left: 4px solid #667eea;
@@ -85,7 +116,6 @@ st.markdown("""
     }
 </style>
 """, unsafe_allow_html=True)
-
 # --- Sidebar Navigation ---
 st.sidebar.title("🎯 Navigation")
 st.sidebar.markdown("---")
